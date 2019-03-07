@@ -24,3 +24,4 @@ object CodeGeneration {
     else throw new Exception("Negative numbers are not currently supported")
 
 }
+
