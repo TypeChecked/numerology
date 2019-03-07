@@ -13,7 +13,9 @@ class SumSpec extends FlatSpec with Matchers {
 
   "Sum" should "add small numbers together correctly" in {
 
+    sum[t0, t0]: Option[t0]
     sum[t0, t1]: Option[t1]
+    sum[t1, t0]: Option[t1]
     sum[t0, t2]: Option[t2]
     sum[t0, t3]: Option[t3]
     sum[t0, t4]: Option[t4]
