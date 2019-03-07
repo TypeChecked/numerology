@@ -7,7 +7,7 @@ sealed trait TNat
 // 0
 final class t0 extends TNat
 
-// Positive int
+// Positive int -- TODO Could replace with implicit =:!= t0
 sealed trait TNonZero extends TNat
 
 // Recursive definition
