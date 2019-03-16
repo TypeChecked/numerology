@@ -58,7 +58,6 @@ lazy val commonSettings = Seq(
   )
 )
 
-// TODO: Put back in root directory?
 val shared = crossProject(JVMPlatform, JSPlatform).crossType(CrossType.Pure).in(file("shared")).settings(commonSettings)
 
 lazy val sharedJVM = shared.jvm
