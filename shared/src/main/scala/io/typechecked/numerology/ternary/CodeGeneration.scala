@@ -9,6 +9,16 @@ object CodeGeneration {
 
   // TODO: Make this into a macro
 
+  def main(args: Array[String]): Unit = {
+
+    val number = args(0).toInt
+
+    (0 to number).foreach { i =>
+      println(generate(i))
+    }
+
+  }
+
   def toTernaryExpansion(n: Long): String = n match {
     case 0 => "t0"
     case _ => (n % 3) match {
@@ -19,7 +29,7 @@ object CodeGeneration {
   }
 
   def generate(i: Long): String =
-    if (i == 0) "class t0 extends TNat"
+    if (i == 0) "final class t0 extends TNat"
     else if (i > 0) s"type t$i = ${toTernaryExpansion(i)}"
     else throw new Exception("Negative numbers are not currently supported")
 

@@ -8,7 +8,7 @@ class CodeGenerationSpec extends FlatSpec with Matchers {
 
   "CodeGeneration" should "produce correct reverse ternary expansions" in {
 
-    CodeGeneration.generate(0) shouldBe "class t0 extends TNat"
+    CodeGeneration.generate(0) shouldBe "final class t0 extends TNat"
     CodeGeneration.generate(1) shouldBe "type t1 = One[t0]"
     CodeGeneration.generate(2) shouldBe "type t2 = Two[t0]"
     CodeGeneration.generate(3) shouldBe "type t3 = Zero[One[t0]]"
