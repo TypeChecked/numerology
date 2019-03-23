@@ -216,4 +216,9 @@ object BNat {
   type b199 = One[One[One[Zero[Zero[Zero[One[One[b0]]]]]]]]
   type b200 = Zero[Zero[Zero[One[Zero[Zero[One[One[b0]]]]]]]]
 
+  type b2147483647 = One[One[One[One[One[One[One[One[One[One[One[One[One[One[One[One[One[One[One[One[One[One[One[One[One[One[One[One[One[One[One[b0]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
+  type MaxInt = b2147483647
+
+  type b2147483648 = Zero[Zero[Zero[Zero[Zero[Zero[Zero[Zero[Zero[Zero[Zero[Zero[Zero[Zero[Zero[Zero[Zero[Zero[Zero[Zero[Zero[Zero[Zero[Zero[Zero[Zero[Zero[Zero[Zero[Zero[Zero[One[b0]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
+
 }

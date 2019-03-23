@@ -218,4 +218,10 @@ object TNat {
   type t198 = Zero[Zero[One[One[Two[t0]]]]]
   type t199 = One[Zero[One[One[Two[t0]]]]]
   type t200 = Two[Zero[One[One[Two[t0]]]]]
+
+  type t2147483647 = One[Zero[One[Two[Zero[Two[Zero[One[One[Two[One[Two[Two[Two[One[Two[One[One[Two[One[t0]]]]]]]]]]]]]]]]]]]]
+  type MaxInt = t2147483647
+
+  type t2147483648 = Two[Zero[One[Two[Zero[Two[Zero[One[One[Two[One[Two[Two[Two[One[Two[One[One[Two[One[t0]]]]]]]]]]]]]]]]]]]]
+
 }
