@@ -19,19 +19,20 @@ object CodeGeneration {
 
   }
 
-  def toTernaryExpansion(n: Long): String = n match {
-    case 0 => "t0"
+  def toTernaryExpansion(n: BigInt): String = n match {
+    case x if x == BigInt(0) => "t0"
     case _ => (n % 3) match {
-      case 0 => s"Zero[${toTernaryExpansion(n / 3)}]"
-      case 1 => s"One[${toTernaryExpansion((n - 1) / 3)}]"
-      case 2 => s"Two[${toTernaryExpansion((n - 2) / 3)}]"
+      case x if x == BigInt(0) => s"Zero[${toTernaryExpansion(n / 3)}]"
+      case x if x == BigInt(1) => s"One[${toTernaryExpansion((n - 1) / 3)}]"
+      case x if x == BigInt(2) => s"Two[${toTernaryExpansion((n - 2) / 3)}]"
     }
   }
 
-  def generate(i: Long): String =
+  def generate(i: BigInt): String =
     if (i == 0) "final class t0 extends TNat"
     else if (i > 0) s"type t$i = ${toTernaryExpansion(i)}"
     else throw new Exception("Negative numbers are not currently supported")
 
-}
+  def generate(i: Long): String = generate(BigInt(i))
 
+}

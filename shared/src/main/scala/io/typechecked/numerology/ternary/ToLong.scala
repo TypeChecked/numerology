@@ -2,6 +2,7 @@ package io.typechecked
 package numerology
 package ternary
 
+// TODO: This is unsafe, can achieve Long overflow with TNat
 trait ToLong[T <: TNat] { def value: Long }
 
 object ToLong {
