@@ -14,9 +14,11 @@ sealed trait MNat
 
 final class m1 extends MNat
 
-trait ^[Pr <: Prime, Po <: TNonZero]
+sealed trait PrimePower
+trait ^[Pr <: Prime, Po <: TNonZero] extends PrimePower
 
-trait *:[P <: ^[_, _], N <: MNat] extends MNat
+trait Compound extends MNat
+trait *:[P <: ^[_, _], N <: MNat] extends MNat with Compound
 
 object MNat {
 

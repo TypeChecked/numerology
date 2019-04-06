@@ -2,14 +2,17 @@ package io.typechecked
 package numerology
 package primary
 
+import mult._
+
 import org.scalatest._
 
+// TODO: Different tests for all the mult algorithms
 class MultSpec extends FlatSpec with Matchers {
 
   import MNat._
 
   // Option is a hack because there are no values of type s.Out
-  def mult[A <: MNat, B <: MNat](implicit s: Mult[A, B]): Option[s.Out] = Option.empty[s.Out]
+  def mult[A <: MNat, B <: MNat](implicit s: Mult3[A, B]): Option[s.Out] = Option.empty[s.Out]
 
   "mult" should "multiply small numbers together correctly" in {
 
