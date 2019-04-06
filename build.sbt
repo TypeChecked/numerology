@@ -8,6 +8,8 @@ resolvers ++= Seq (
   "Sonatype OSS Snapshots" at "http://oss.sonatype.org/content/repositories/snapshots/"
 )
 
+lazy val Benchmark = config("bench").extend(Compile)
+
 lazy val commonSettings = Seq(
   name := "numerology",
   version := "0.1.0-SNAPSHOT",
@@ -20,6 +22,7 @@ lazy val commonSettings = Seq(
     "org.scalactic" %%% "scalactic" % "3.0.5",
     "org.scalatest" %%% "scalatest" % "3.0.5" % "test",
   ),
+
   scalacOptions := Seq(
     "-deprecation",                      // Emit warning and location for usages of deprecated APIs.
     "-encoding", "utf-8",                // Specify character encoding used by source files.
@@ -58,12 +61,16 @@ lazy val commonSettings = Seq(
   )
 )
 
-val shared = crossProject(JVMPlatform, JSPlatform).crossType(CrossType.Pure).in(file("shared")).settings(commonSettings)
+val shared = crossProject(JVMPlatform, JSPlatform)
+  .crossType(CrossType.Pure)
+  .in(file("."))
+  .settings(commonSettings)
 
 lazy val sharedJVM = shared.jvm
 lazy val sharedJS = shared.js
 
-lazy val numerology = project.in(file(".")).aggregate(sharedJVM, sharedJS).settings(
+lazy val numerology = project.in(file(".")).settings(
   commonSettings,
-  publishArtifact := false
-)
+  publishArtifact := false,
+  inConfig(Benchmark)(Defaults.configSettings)
+).configs(Benchmark)
