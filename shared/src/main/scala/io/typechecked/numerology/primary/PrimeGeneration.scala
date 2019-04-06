@@ -9,11 +9,13 @@ object PrimeGeneration {
     val number = args(0).toInt
 
     (2 to number).filter(isPrime).foreach { n =>
-      println(s"type p$n = PrimeNat[t$n]")
+      println(generate(n))
     }
 
   }
 
   def isPrime(n: Int): Boolean = ! ((2 until n-1) exists (n % _ == 0))
+
+  def generate(n: Int): String = s"type p$n = PrimeNat[t$n]"
 
 }

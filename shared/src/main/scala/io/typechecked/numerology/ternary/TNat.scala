@@ -221,8 +221,10 @@ object TNat {
 
   type t227 = Two[Zero[One[Two[Two[t0]]]]]
   type t421 = One[Two[One[Zero[Two[One[t0]]]]]]
+  type t607 = One[One[One[One[One[Two[t0]]]]]]
   type t1543 = One[One[Zero[Zero[One[Zero[Two[t0]]]]]]]
   type t2333 = Two[Zero[One[Two[One[Zero[Zero[One[t0]]]]]]]]
+  type t4051 = One[Zero[Zero[Zero[Two[One[Two[One[t0]]]]]]]]
   type t48611 = Two[Zero[One[Zero[Zero[Two[Zero[One[One[Two[t0]]]]]]]]]]
   type t15485863 = One[One[One[One[Two[One[Two[Zero[Two[Zero[One[Zero[Two[Zero[Zero[One[t0]]]]]]]]]]]]]]]]
 

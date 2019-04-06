@@ -2,7 +2,6 @@ package io.typechecked
 package numerology
 package primary
 
-
 import ternary._
 import ternary.TNat._
 
@@ -235,14 +234,15 @@ object MNat {
 
   type m1604163 = (p48611 ^ t1) *: (p11 ^ t1) *: (p3 ^ t1) *: m1
 
-  type m1823909224137000 = (p19 ^ t1) *:
-    (p17 ^ t3) *:
-    (p13 ^ t3) *:
-    (p11 ^ t2) *:
-    (p7 ^ t2) *:
+  type m1823909224137000 = (p4051 ^ t1) *:
+    (p607 ^ t1) *:
+    (p19 ^ t1) *:
+    (p13 ^ t2) *:
+    (p11 ^ t1) *:
+    (p7 ^ t1) *:
     (p5 ^ t3) *:
     (p3 ^ t1) *:
-    (p2 ^ t2) *:
+    (p2 ^ t3) *:
     m1
 
   type m131941772149 = (p2333 ^ t1) *:
@@ -250,6 +250,21 @@ object MNat {
     (p71 ^ t1) *:
     (p29 ^ t1) *:
     (p11 ^ t2) *:
+    m1
+
+  type m240649815271543425160413000 = (p4051 ^ t1) *:
+    (p2333 ^ t1) *:
+    (p607 ^ t1) *:
+    (p227 ^ t1) *:
+    (p71 ^ t1) *:
+    (p29 ^ t1) *:
+    (p19 ^ t1) *:
+    (p13 ^ t2) *:
+    (p11 ^ t3) *:
+    (p7 ^ t1) *:
+    (p5 ^ t3) *:
+    (p3 ^ t1) *:
+    (p2 ^ t3) *:
     m1
 
 }

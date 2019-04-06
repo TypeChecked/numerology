@@ -59,8 +59,10 @@ object Prime {
 
   type p227 = PrimeNat[t227]
   type p421 = PrimeNat[t421]
+  type p607 = PrimeNat[t607]
   type p1543 = PrimeNat[t1543]
   type p2333 = PrimeNat[t2333]
+  type p4051 = PrimeNat[t4051]
 
   type p48611 = PrimeNat[t48611]
 
