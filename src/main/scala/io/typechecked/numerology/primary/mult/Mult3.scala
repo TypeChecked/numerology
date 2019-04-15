@@ -18,12 +18,12 @@ object Mult3 {
   implicit def m1Case2[N <: Compound]: Mult3.Aux[N, m1, N] = null
 
   implicit def lhsGreaterPrimeRecurse[P <: Prime, A <: TNonZero, M <: MNat, Q <: Prime, B <: TNonZero, N <: MNat](
-    implicit ev: P PrimeGt Q,
+    implicit ev: Q PrimeLt P,
     recurse: Mult3[M, (Q^B) *: N]
   ): Mult3.Aux[(P^A) *: M, (Q^B) *: N, (P^A) *: recurse.Out] = null
 
   implicit def rhsGreaterPrimeRecurse[P <: Prime, A <: TNonZero, M <: MNat, Q <: Prime, B <: TNonZero, N <: MNat](
-    implicit ev: Q PrimeGt P,
+    implicit ev: P PrimeLt Q,
     recurse: Mult3[(P^A) *: M, N]
   ): Mult3.Aux[(P^A) *: M, (Q^B) *: N, (Q^B) *: recurse.Out] = null
 
