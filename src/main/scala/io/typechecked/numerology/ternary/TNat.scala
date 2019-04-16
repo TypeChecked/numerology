@@ -227,7 +227,6 @@ object TNat {
   type t4051 = One[Zero[Zero[Zero[Two[One[Two[One[t0]]]]]]]]
   type t48611 = Two[Zero[One[Zero[Zero[Two[Zero[One[One[Two[t0]]]]]]]]]]
   type t15485863 = One[One[One[One[Two[One[Two[Zero[Two[Zero[One[Zero[Two[Zero[Zero[One[t0]]]]]]]]]]]]]]]]
-
   type t2147483647 = One[Zero[One[Two[Zero[Two[Zero[One[One[Two[One[Two[Two[Two[One[Two[One[One[Two[One[t0]]]]]]]]]]]]]]]]]]]]
   type MaxInt = t2147483647
 

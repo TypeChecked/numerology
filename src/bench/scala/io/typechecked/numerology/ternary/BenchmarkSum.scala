@@ -7,7 +7,7 @@ import TNat._
 /**
  * Each sum in this benchmark example object compiles in trivial time apart from the very largest which begin to take time
  */
-object Benchmark {
+object BenchmarkSum {
 
   // This code is never run so it is safe to throw this exception here
   def sum[A <: TNat, B <: TNat](implicit s: Sum[A, B]): s.Out = ???

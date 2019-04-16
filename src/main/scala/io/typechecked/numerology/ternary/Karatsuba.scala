@@ -76,29 +76,6 @@ trait LP111 {
 
 }
 
-object Test {
-
-  import TNat._
-  type t323 = Two[Two[Two[Two[Zero[One[t0]]]]]]
-  type t340 = One[Two[One[Zero[One[One[t0]]]]]]
-  type X = Two[Two[Zero[One[Zero[Zero[Zero[One[t0]]]]]]]]
-  type t1164009493 = Two[Two[Zero[One[Zero[One[One[One[Zero[Zero[Two[One[Two[Zero[Two[One[Zero[Zero[Two[Two[Two[Two[Two[One[Two[t0]]]]]]]]]]]]]]]]]]]]]]]]]
-  type t18025691539297459 = One[One[Zero[Two[One[Zero[One[Zero[Zero[Two[Two[One[Two[Two[Zero[One[Two[One[One[Two[Zero[Zero[Zero[Two[One[One[Two[Two[One[One[Zero[Two[Zero[Zero[One[t0]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
-
-  Karatsuba.test[t3, t3]: t9
-  Karatsuba.test[t3, t9]: t27
-  Karatsuba.test[t7, t7]: t49
-  Karatsuba.test[t19, t17]: t323
-  Karatsuba.test[t4, t5]: t20
-  Karatsuba.test[t24, t3]: t72
-  Karatsuba.test[t68, t5]: t340
-  Karatsuba.test[One[One[One[One[Two[t0]]]]], Two[Zero[One[t0]]]]: X
-  Karatsuba.test[t15485863, t48611]: t1164009493
-  // GC overhead exceeded:
-  // Karatsuba.test[t1164009493, t15485863]: t18025691539297459
-
-}
-
 // Rounds down to the nearest even number
 trait Evenify[M <: TNat] { type Out <: TNat }
 object Evenify {
