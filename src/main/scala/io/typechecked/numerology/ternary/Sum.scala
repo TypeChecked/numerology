@@ -20,19 +20,19 @@ object Sum extends LowPrioritySumImplicits {
   implicit def sumTO1[A <: TNat, B <: TNat, SOut <: TNat, SIncr <: TNat](
     implicit s: Sum.Aux[A, B, SOut],
     incr: Incr.Aux[SOut, SIncr],
-    app: SplitAtIndex.ApplyOperation[SIncr, Zero]
-  ): Sum.Aux[One[A], Two[B], app.Out] = null
+    treble: Treble[SIncr]
+  ): Sum.Aux[One[A], Two[B], treble.Out] = null
 
   implicit def sumTO2[A <: TNat, B <: TNat, SOut <: TNat, SIncr <: TNat](
     implicit s: Sum.Aux[A, B, SOut],
     incr: Incr.Aux[SOut, SIncr],
-    app: SplitAtIndex.ApplyOperation[SIncr, Zero]
-  ): Sum.Aux[Two[A], One[B], app.Out] = null
+    treble: Treble[SIncr]
+  ): Sum.Aux[Two[A], One[B], treble.Out] = null
 
   implicit def sumZZ[A <: TNat, B <: TNat, AB <: TNat](
     implicit s: Sum.Aux[A, B, AB],
-    app: SplitAtIndex.ApplyOperation[AB, Zero]
-  ): Sum.Aux[Zero[A], Zero[B], app.Out] = null
+    treble: Treble[AB]
+  ): Sum.Aux[Zero[A], Zero[B], treble.Out] = null
 
   implicit def sumOO[A <: TNat, B <: TNat](implicit s: Sum[A, B]): Sum.Aux[One[A], One[B], Two[s.Out]] = null
 
@@ -79,17 +79,17 @@ object Minus {
 
   implicit def minusZZ[A <: TNat, B <: TNat, Out <: TNat](
     implicit s: Minus.Aux[A, B, Out],
-    app: SplitAtIndex.ApplyOperation[Out, Zero]
-  ): Minus.Aux[Zero[A], Zero[B], app.Out] = null
+    treble: Treble[Out]
+  ): Minus.Aux[Zero[A], Zero[B], treble.Out] = null
 
   implicit def minusOO[A <: TNat, B <: TNat, Out <: TNat](
     implicit s: Minus.Aux[A, B, Out],
-    app: SplitAtIndex.ApplyOperation[Out, Zero]
-  ): Minus.Aux[One[A], One[B], app.Out] = null
+    treble: Treble[Out]
+  ): Minus.Aux[One[A], One[B], treble.Out] = null
 
   implicit def minusTT[A <: TNat, B <: TNat, Out <: TNat](
     implicit s: Minus.Aux[A, B, Out],
-    app: SplitAtIndex.ApplyOperation[Out, Zero]
-  ): Minus.Aux[Two[A], Two[B], app.Out] = null
+    treble: Treble[Out]
+  ): Minus.Aux[Two[A], Two[B], treble.Out] = null
 
 }

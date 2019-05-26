@@ -14,7 +14,7 @@ object BenchmarkMult {
   type t27117948482616189036033776088825773252 = Two[One[Zero[Two[Two[One[Zero[Zero[One[One[Zero[One[One[Zero[One[Two[Zero[Two[Two[One[Zero[Two[One[Two[Zero[One[One[Zero[Zero[Zero[Two[One[Two[Two[Zero[Two[Zero[One[One[Two[One[Zero[One[One[Zero[Two[Two[Zero[One[One[Zero[Zero[One[Two[Two[One[Two[Zero[Zero[Two[Zero[One[Zero[One[Two[Two[One[One[One[One[Zero[Two[Zero[Two[One[Two[Two[One[One[t0]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
 
   // 4s
-  mult[t3623159657334655154, t7484613168431353138]: t27117948482616189036033776088825773252
+  // mult[t3623159657334655154, t7484613168431353138]: t27117948482616189036033776088825773252
 
 
   // 10^27
@@ -25,7 +25,7 @@ object BenchmarkMult {
   type t8118013882851097807444087473143246786900398624899884886 = Zero[Two[One[One[Two[One[Zero[One[Zero[Zero[One[Two[Zero[One[One[Two[Two[Zero[Two[One[Zero[Two[One[Zero[One[Two[One[Zero[One[One[Zero[Two[One[One[Two[Two[Two[Zero[Zero[Zero[One[Zero[Zero[Two[One[Two[Two[One[Two[Zero[One[Zero[Two[Two[One[One[One[Zero[Two[One[Zero[Zero[Zero[Zero[Zero[Two[One[Two[Two[Zero[One[Two[Zero[Two[One[One[Zero[Two[One[Zero[Zero[Two[Two[Zero[Zero[Two[One[Zero[Zero[Zero[Two[Zero[One[One[Two[Zero[One[One[Zero[Zero[Zero[One[Zero[Zero[One[Zero[One[Two[Zero[Two[Two[One[Two[Zero[Zero[One[t0]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
 
   // 18s
-  mult[t6862134337616076187979017153, t1183015878653188467097883862]: t8118013882851097807444087473143246786900398624899884886
+  // mult[t6862134337616076187979017153, t1183015878653188467097883862]: t8118013882851097807444087473143246786900398624899884886
 
 
   // 10^35
@@ -36,7 +36,7 @@ object BenchmarkMult {
   type t152758455151844629385511878215369867815257805377753115738588919976371896 = Zero[Zero[Zero[Two[One[One[Two[Zero[Two[Zero[One[One[Zero[One[Two[Two[One[Two[Two[Zero[Two[Zero[Two[Zero[Two[One[One[Zero[Zero[Two[One[Zero[One[Zero[Two[One[Two[Two[One[One[One[Zero[One[Zero[Zero[Two[Two[Zero[One[Two[One[One[One[One[Two[Two[One[Two[Two[Two[Zero[Zero[One[Two[One[Two[One[Two[One[One[Zero[Zero[Zero[Two[One[One[Zero[One[Two[Two[Two[Zero[Two[One[Two[Two[Two[One[Two[One[Two[Two[Zero[One[Zero[Zero[Zero[Zero[Two[Zero[One[Two[One[Two[Two[One[Two[Two[Two[Zero[One[One[One[Zero[One[Zero[Zero[Zero[Zero[Zero[Two[Zero[Zero[One[Two[Two[Zero[Two[One[Two[Two[Zero[Zero[Zero[Zero[One[Two[Two[Zero[Two[One[Two[Two[Two[Zero[One[Zero[Two[Zero[One[t0]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
 
   // 30s
-  mult[t563212342332380871279452964893563959, t271227108623436250455334138632430344]: t152758455151844629385511878215369867815257805377753115738588919976371896
+  // mult[t563212342332380871279452964893563959, t271227108623436250455334138632430344]: t152758455151844629385511878215369867815257805377753115738588919976371896
 
   // 10^42
   type t5632123423323808712794529648935639591408604650 = One[One[Two[Zero[One[Two[Zero[Two[One[One[One[One[Zero[Zero[Two[One[Two[Two[Two[Two[Two[Two[Two[Zero[Zero[One[Zero[One[One[Zero[One[One[Two[One[One[Two[One[One[One[One[Two[Zero[Zero[Two[One[One[Zero[One[Two[Two[Two[One[Two[Zero[One[Two[Two[One[One[One[Two[One[One[Zero[One[Zero[One[One[One[Zero[One[Zero[One[Two[One[One[Two[Zero[One[Two[Two[One[Zero[Zero[Zero[Zero[Zero[Two[Two[Zero[Zero[Two[Two[Two[One[Two[t0]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
