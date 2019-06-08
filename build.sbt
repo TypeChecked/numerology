@@ -10,6 +10,8 @@ resolvers ++= Seq (
 
 lazy val Benchmark = config("bench").extend(Compile)
 
+lazy val supportedScalaVersions = List("2.12.8", "2.13.0-M3")
+
 lazy val commonSettings = Seq(
   name := "numerology",
   version := "0.1.0-SNAPSHOT",
@@ -64,7 +66,10 @@ lazy val commonSettings = Seq(
 val shared = crossProject(JVMPlatform, JSPlatform)
   .crossType(CrossType.Pure)
   .in(file("."))
-  .settings(commonSettings)
+  .settings(
+    crossScalaVersions := supportedScalaVersions,
+    commonSettings
+  )
 
 lazy val sharedJVM = shared.jvm
 lazy val sharedJS = shared.js
