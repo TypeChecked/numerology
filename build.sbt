@@ -10,17 +10,58 @@ resolvers ++= Seq (
 
 lazy val Benchmark = config("bench").extend(Compile)
 
+lazy val publishingSettings = Seq(
+
+  credentials += Credentials(Path.userHome / ".sbt" / "sonatype_credential"),
+
+  useGpg := true,
+  ThisBuild / organization := "io.typechecked",
+  ThisBuild / organizationName := "numerology",
+  ThisBuild / organizationHomepage := Some(url("http://typechecked.io")),
+
+  ThisBuild / scmInfo := Some(
+    ScmInfo(
+      url("https://github.com/TypeChecked/numerology"),
+      "scm:git@github.com:TypeChecked/numerology.git"
+    )
+  ),
+
+  ThisBuild / developers := List(
+    Developer(
+      id    = "jdrphillips",
+      name  = "James Phillips",
+      email = "me@jdrphillips.io",
+      url   = url("http://jdrphillips.io")
+    )
+  ),
+
+  ThisBuild / licenses := List("Apache 2" -> new URL("http://www.apache.org/licenses/LICENSE-2.0.txt")),
+  ThisBuild / homepage := Some(url("https://github.com/TypeChecked/numerology")),
+
+  // Remove all additional repository other than Maven Central from POM
+  ThisBuild / pomIncludeRepository := { _ => false },
+  ThisBuild / publishTo := {
+    val nexus = "https://oss.sonatype.org/"
+    if (isSnapshot.value) Some("snapshots" at nexus + "content/repositories/snapshots")
+    else Some("releases" at nexus + "service/local/staging/deploy/maven2")
+  },
+  ThisBuild / publishMavenStyle := true,
+
+  // sbt-release plugin settings
+  releaseUseGlobalVersion := true,
+  releasePublishArtifactsAction := PgpKeys.publishSigned.value,
+
+)
+
 lazy val commonSettings = Seq(
   name := "numerology",
-  version := "0.1.0-SNAPSHOT",
   scalaVersion := "2.12.8",
   organization := "io.typechecked",
-  addCompilerPlugin("org.spire-math" %% "kind-projector" % "0.9.9"),
 
   libraryDependencies ++= Seq(
     "com.chuusai" %%% "shapeless" % "2.3.3",
     "org.scalactic" %%% "scalactic" % "3.0.5",
-    "org.scalatest" %%% "scalatest" % "3.0.5" % "test",
+    "org.scalatest" %%% "scalatest" % "3.0.5" % "test"
   ),
 
   scalacOptions := Seq(
@@ -61,16 +102,22 @@ lazy val commonSettings = Seq(
   )
 )
 
-val shared = crossProject(JVMPlatform, JSPlatform)
-  .crossType(CrossType.Pure)
-  .in(file("."))
-  .settings(commonSettings)
+val numerology = crossProject(JVMPlatform, JSPlatform).crossType(CrossType.Pure).in(file(".")).settings(
+  name := "numerology",
+  commonSettings ++ publishingSettings
+)
 
-lazy val sharedJVM = shared.jvm
-lazy val sharedJS = shared.js
+lazy val numerologyJVM = numerology.jvm
 
-lazy val numerology = project.in(file(".")).settings(
+lazy val numerologyJS = numerology.js
+
+lazy val numerologyParent = project.in(file(".")).aggregate(numerologyJVM, numerologyJS).settings(
+  name := "numerology-parent",
   commonSettings,
-  publishArtifact := false,
-  inConfig(Benchmark)(Defaults.configSettings)
+  PgpKeys.publishSigned := {},
+  PgpKeys.publishLocalSigned := {},
+  publishLocal := {},
+  publishArtifact in Compile := false,
+  inConfig(Benchmark)(Defaults.configSettings),
+  publish := {}
 ).configs(Benchmark)
