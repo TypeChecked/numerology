@@ -1,11 +1,20 @@
 # Numerology
 
-A library demonstrating various approaches to developing a faster `Nat`
+A library demonstrating various approaches to developing a faster `Nat`.
 
 See [here](https://medium.com/swlh/counting-to-infinity-at-compile-time-2bbdd6446329) for a blog post introduction to the main concept
 of the repo.
 
-## Problem
+# Installation 
+Releases are available on Maven. Add the following to your build.sbt:
+
+```
+"io.typechecked" %% "numerology" % "<version>"
+```
+
+for the version of your choice. The project is fully tagged and release versions are available to view online.
+
+## The Problem
 
 Traditional church-encoded `Nat` is slow. What alternatives are there?
 
