@@ -11,11 +11,11 @@ Traditional church-encoded `Nat` is slow. What alternatives are there?
 
 ### BNat
 
-Binary-encoded `Nat`. Significantly faster, and relativelty easy for programmers to reason about.
+Binary-encoded `Nat`. Significantly faster, and relatively easy for programmers to reason about.
 
 ### TNat
 
-Ternary-encoded `Nat`. Significantly faster again. Can reach 10^300 whilst performing addition and approx 10^40 for multiplication.
+Ternary-encoded `Nat`. Significantly faster again. Can reach 10<sup>300</sup> whilst performing addition and approx 10<sup>40</sup> for multiplication.
 
 It is harder to implement typeclasses for `TNat` than the alternatives.
 
@@ -29,6 +29,6 @@ of the number `MNat` represents.
 The theory was that multiplication is then reduced to simple list operations (concat, sort, etc), and it would
 prove faster than `TNat` which relies on recursing on `Sum`.
 
-Unfortunately this was not the case. `MNat` reaches approx 10^20 * 10^20 (worst-case integers) before failing. About the square root of `TNat`'s limit.
+Unfortunately this was not the case. `MNat` reaches approx 10<sup>20</sup> * 10<sup>20</sup> (worst-case integers) before failing. About the square root of `TNat`'s limit.
 
 When paired with the approach in [symbology](), this encoding would compile primality testing typeclasses in trivial time.
