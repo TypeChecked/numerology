@@ -232,4 +232,9 @@ object TNat {
 
   type t2147483648 = Two[Zero[One[Two[Zero[Two[Zero[One[One[Two[One[Two[Two[Two[One[Two[One[One[Two[One[t0]]]]]]]]]]]]]]]]]]]]
 
+  type t9223372036854775807 = One[Two[Two[Zero[Two[Two[One[Zero[One[Zero[Two[Two[One[Two[Zero[Zero[One[Zero[Two[Zero[One[Two[One[Zero[Zero[One[Two[Two[Two[Zero[One[One[Zero[Zero[One[One[One[Two[Zero[Two[t0]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
+  type MaxLong = t9223372036854775807
+
+  type t9223372036854775808 = Two[Two[Two[Zero[Two[Two[One[Zero[One[Zero[Two[Two[One[Two[Zero[Zero[One[Zero[Two[Zero[One[Two[One[Zero[Zero[One[Two[Two[Two[Zero[One[One[Zero[Zero[One[One[One[Two[Zero[Two[t0]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
+
 }
