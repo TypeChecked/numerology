@@ -30,3 +30,5 @@ The theory was that multiplication is then reduced to simple list operations (co
 prove faster than `TNat` which relies on recursing on `Sum`.
 
 Unfortunately this was not the case. `MNat` reaches approx 10^20 * 10^20 (worst-case integers) before failing. About the square root of `TNat`'s limit.
+
+When paired with the approach in [symbology](), this encoding would compile primality testing typeclasses in trivial time.
