@@ -119,13 +119,6 @@ object PadLeft {
 
 }
 
-trait Min[A <: TNat, B <: TNat] { type Out <: TNat }
-object Min {
-  type Aux[A <: TNat, B <: TNat, C <: TNat] = Min[A, B] { type Out = C }
-  implicit def lte1[A <: TNat, B <: TNat](implicit ev: A Gte B): Min.Aux[A, B, B] = null
-  implicit def lte2[A <: TNat, B <: TNat](implicit ev: A Lt B): Min.Aux[A, B, A] = null
-}
-
 trait Length[M <: TNat] { type Out <: TNat }
 object Length {
 
