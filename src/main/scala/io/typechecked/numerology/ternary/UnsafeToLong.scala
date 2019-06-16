@@ -11,7 +11,7 @@ trait UnsafeToLong[T <: TNat] { def value: Long }
 object UnsafeToLong {
 
   implicit val baseCase: UnsafeToLong[t0] =
-    new UnsafeToLong[t0] { val value: Long = 0l }
+    new UnsafeToLong[t0] { val value: Long = 0L }
 
   implicit def zeroCase[T <: TNat](implicit i: UnsafeToLong[T]): UnsafeToLong[Zero[T]] =
     new UnsafeToLong[Zero[T]] { val value = 3 * i.value }

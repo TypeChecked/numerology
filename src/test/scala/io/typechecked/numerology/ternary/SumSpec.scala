@@ -49,7 +49,7 @@ class SumSpec extends FlatSpec with Matchers {
     type t77219132141850587 = Two[Two[Zero[One[Zero[Two[One[Zero[Zero[Zero[One[Zero[One[Zero[Two[Two[Two[Zero[One[Two[Two[Zero[Two[Zero[Two[Two[Zero[One[Zero[Zero[Zero[Two[Two[One[One[One[t0]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
 
     // Prove the numbers add up in real life
-    77145285937108463l + 73846204742124l shouldBe 77219132141850587l
+    77145285937108463L + 73846204742124L shouldBe 77219132141850587L
 
     // Compiles in < 1s
     sum[t77145285937108463, t73846204742124]: Option[t77219132141850587]

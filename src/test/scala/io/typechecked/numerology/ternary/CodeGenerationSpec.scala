@@ -15,7 +15,7 @@ class CodeGenerationSpec extends FlatSpec with Matchers {
     CodeGeneration.generate(4) shouldBe "type t4 = One[One[t0]]"
     CodeGeneration.generate(8) shouldBe "type t8 = Two[Two[t0]]"
     CodeGeneration.generate(10) shouldBe "type t10 = One[Zero[One[t0]]]"
-    CodeGeneration.generate(423644304720l) shouldBe "type t423644304720 = Zero[One[One[One[One[One[One[One[One[One[One[One[One[One[One[One[One[One[One[One[One[One[One[One[One[t0]]]]]]]]]]]]]]]]]]]]]]]]]"
+    CodeGeneration.generate(423644304720L) shouldBe "type t423644304720 = Zero[One[One[One[One[One[One[One[One[One[One[One[One[One[One[One[One[One[One[One[One[One[One[One[One[t0]]]]]]]]]]]]]]]]]]]]]]]]]"
 
     // Nested definitions
     CodeGeneration.toTernaryExpansion(75) shouldBe s"Zero[${CodeGeneration.toTernaryExpansion(25)}]"
