@@ -220,6 +220,7 @@ object TNat {
   type t200 = Two[Zero[One[One[Two[t0]]]]]
 
   type t227 = Two[Zero[One[Two[Two[t0]]]]]
+  type t255 = Zero[One[One[Zero[Zero[One[t0]]]]]]
   type t421 = One[Two[One[Zero[Two[One[t0]]]]]]
   type t607 = One[One[One[One[One[Two[t0]]]]]]
   type t1543 = One[One[Zero[Zero[One[Zero[Two[t0]]]]]]]
