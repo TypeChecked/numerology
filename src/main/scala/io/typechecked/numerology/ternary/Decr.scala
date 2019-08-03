@@ -10,7 +10,7 @@ object Decr {
 
   implicit def zeroCase[M <: TNat](implicit d: Decr[M]): Decr.Aux[Zero[M], Two[d.Out]] = null
 
-  implicit def oneCase[M <: TNat](implicit app: SplitAtIndex.ApplyOperation[M, Zero]): Decr.Aux[One[M], app.Out] = null
+  implicit def oneCase[M <: TNat](implicit treble: Treble[M]): Decr.Aux[One[M], treble.Out] = null
 
   implicit def twoCase[M <: TNat]: Decr.Aux[Two[M], One[M]] = null
 
