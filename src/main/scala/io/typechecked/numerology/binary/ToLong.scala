@@ -2,6 +2,8 @@ package io.typechecked
 package numerology
 package binary
 
+import BNat.b0
+
 trait ToLong[T <: BNat] { def value: Long }
 
 object ToLong {

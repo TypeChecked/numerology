@@ -2,7 +2,7 @@ package io.typechecked
 package numerology
 package ternary
 
-import TNat.t1
+import TNat.{t0, t1}
 
 // Less than
 trait Lt[A <: TNat, B <: TNat]

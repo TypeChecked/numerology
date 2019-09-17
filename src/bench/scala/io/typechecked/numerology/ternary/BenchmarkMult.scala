@@ -2,6 +2,8 @@ package io.typechecked
 package numerology
 package ternary
 
+import io.typechecked.numerology.ternary.TNat.t0
+
 object BenchmarkMult {
 
   def mult[M <: TNat, N <: TNat](implicit m: Mult[M, N]): m.Out = ???

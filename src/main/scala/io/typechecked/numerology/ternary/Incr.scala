@@ -2,7 +2,7 @@ package io.typechecked
 package numerology
 package ternary
 
-import TNat.t1
+import TNat.{t0, t1}
 
 trait Incr[A <: TNat] { type Out <: TNat }
 

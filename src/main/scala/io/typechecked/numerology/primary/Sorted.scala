@@ -2,6 +2,7 @@ package io.typechecked
 package numerology
 package primary
 
+import MNat.m1
 import ternary.TNat._
 import ternary.TNonZero
 

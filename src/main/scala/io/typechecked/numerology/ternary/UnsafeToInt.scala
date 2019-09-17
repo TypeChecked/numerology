@@ -2,6 +2,8 @@ package io.typechecked
 package numerology
 package ternary
 
+import TNat.t0
+
 // If provided a TNat > MaxInt it will overflow and wrap around
 // It is faster than ToInt though
 // Only use if you're sure you will never exceed MaxInt

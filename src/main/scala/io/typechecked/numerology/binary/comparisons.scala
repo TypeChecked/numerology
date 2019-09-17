@@ -2,6 +2,8 @@ package io.typechecked
 package numerology
 package binary
 
+import BNat.b0
+
 // Less than
 trait Lt[A <: BNat, B <: BNat]
 

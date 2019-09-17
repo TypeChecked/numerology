@@ -2,6 +2,8 @@ package io.typechecked
 package numerology
 package ternary
 
+import TNat.t0
+
 trait Mult[A <: TNat, B <: TNat] { type Out <: TNat }
 
 object Mult {

@@ -6,7 +6,6 @@ sealed trait BNat
 
 sealed trait BNonZero extends BNat
 
-final class b0 extends BNat
 
 trait BOperation[N <: BNat] extends BNonZero
 
@@ -14,6 +13,8 @@ trait One[T <: BNat] extends BOperation[T]
 trait Zero[T <: BNat] extends BOperation[T]
 
 object BNat {
+
+  final class b0 extends BNat
 
   type b1 = One[b0]
   type b2 = Zero[One[b0]]

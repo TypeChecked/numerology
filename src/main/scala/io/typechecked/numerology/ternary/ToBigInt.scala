@@ -2,6 +2,8 @@ package io.typechecked
 package numerology
 package ternary
 
+import TNat.t0
+
 // Slowest way to get a number value from a TNat but is always safe
 trait ToBigInt[T <: TNat] { def value: BigInt }
 

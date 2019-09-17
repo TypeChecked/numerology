@@ -4,9 +4,6 @@ package ternary
 
 sealed trait TNat
 
-// 0
-final class t0 extends TNat
-
 // Positive int -- TODO Could replace with implicit =:!= t0
 sealed trait TNonZero extends TNat
 
@@ -18,6 +15,9 @@ trait One[T <: TNat] extends TOperation[T]    // One[t] = 3t + 1
 trait Two[T <: TNat] extends TOperation[T]    // Two[t] = 3t + 2
 
 object TNat {
+
+  final class t0 extends TNat
+
   type t1 = One[t0]
   type t2 = Two[t0]
   type t3 = Zero[One[t0]]

@@ -2,7 +2,7 @@ package io.typechecked
 package numerology
 package binary
 
-import BNat.b1
+import BNat.{b0, b1}
 
 trait Mult[A <: BNat, B <: BNat] { type Out <: BNat }
 
