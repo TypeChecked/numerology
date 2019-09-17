@@ -2,6 +2,8 @@ package io.typechecked
 package numerology
 package binary
 
+import BNat.b0
+
 // If provided a BNat > MaxInt it will overflow and wrap around
 // It is faster than ToInt though
 // Only use if you're sure you will never exceed MaxInt

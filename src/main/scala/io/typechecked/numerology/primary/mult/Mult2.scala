@@ -3,6 +3,7 @@ package numerology
 package primary
 package mult
 
+import io.typechecked.numerology.primary.MNat.m1
 import ternary.TNat
 import ternary.TNonZero
 import shapeless.=:!=

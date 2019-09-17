@@ -12,8 +12,6 @@ import Prime._
  */
 sealed trait MNat
 
-final class m1 extends MNat
-
 sealed trait PrimePower
 trait ^[Pr <: Prime, Po <: TNonZero] extends PrimePower
 
@@ -21,6 +19,8 @@ trait Compound extends MNat
 trait *:[P <: ^[_, _], N <: MNat] extends MNat with Compound
 
 object MNat {
+
+  final class m1 extends MNat
 
   type m2 = (p2 ^ t1) *: m1
   type m3 = (p3 ^ t1) *: m1

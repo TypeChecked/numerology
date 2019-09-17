@@ -4,6 +4,7 @@ package primary
 
 import shapeless.=:!=
 
+import MNat.m1
 import ternary.Lt
 import ternary.TNonZero
 

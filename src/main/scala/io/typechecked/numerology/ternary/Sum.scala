@@ -2,6 +2,8 @@ package io.typechecked
 package numerology
 package ternary
 
+import io.typechecked.numerology.ternary.TNat.t0
+
 trait Sum[A <: TNat, B <: TNat] { type Out <: TNat }
 
 object Sum {

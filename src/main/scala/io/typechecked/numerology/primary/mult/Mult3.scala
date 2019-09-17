@@ -3,6 +3,7 @@ package numerology
 package primary
 package mult
 
+import MNat.m1
 import ternary.AsNonZero
 import ternary.TNat
 import ternary.TNonZero

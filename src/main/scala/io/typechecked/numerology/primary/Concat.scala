@@ -2,6 +2,8 @@ package io.typechecked
 package numerology
 package primary
 
+import MNat.m1
+
 trait Concat[A <: MNat, B <: MNat] { type Out <: MNat }
 
 object Concat {

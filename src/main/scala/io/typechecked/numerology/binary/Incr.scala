@@ -2,7 +2,7 @@ package io.typechecked
 package numerology
 package binary
 
-import BNat.b1
+import BNat.{b0, b1}
 
 trait Incr[A <: BNat] { type Out <: BNat }
 
