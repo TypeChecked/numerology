@@ -13,7 +13,7 @@ class GCDSpec extends FlatSpec with Matchers {
 
     gcd[b1, b1]: Option[b1]
     gcd[b1, b2]: Option[b1]
-    gcd[b1, b3]: Option[b1]
+    gcd[b3, b1]: Option[b1]
     gcd[b1, b4]: Option[b1]
     gcd[b2, b1]: Option[b1]
     gcd[b2, b2]: Option[b2]

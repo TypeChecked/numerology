@@ -1,12 +1,13 @@
 package io.typechecked.numerology.binary
 
 import io.typechecked.numerology.binary.BNat.{b0, b2}
-import io.typechecked.numerology.binary.GCD.Aux
-import shapeless.{=:!=, Lazy, LowPriority}
+import shapeless.=:!=
 
 trait GCD[A <: BNat, B <: BNat] { type Out <: BNat }
 
-object GCD extends LowPriorityGCD {
+object GCD {
+
+  //Stein's Algorithm for binary GCD.
 
   type Aux[A <: BNat, B <: BNat, Out0 <: BNat] = GCD[A, B] { type Out = Out0 }
 
@@ -23,16 +24,13 @@ object GCD extends LowPriorityGCD {
   implicit def rightEven[A <: BNat, B <: BNat]
   (implicit ev: GCD[One[A], B]): Aux[One[A], Zero[B], ev.Out] = null
 
-  implicit def bothOdd1[A <: BNat, B <: BNat, Res <: BNat, Out <: BNat]
+  implicit def bothOddLeftGreater[A <: BNat, B <: BNat, Res <: BNat, Out <: BNat, MultOut <: BNat]
   (implicit gcd: Aux[A, One[B], Res],
-   sum: Sum.Aux[Zero[A], One[B], One[Out]],
+   mult: Mult.Aux[A, b2, MultOut],
+   sum: Sum.Aux[MultOut, One[B], One[Out]],
    gt: Gt[Out, B]
   ): Aux[One[Out], One[B], Res] = null
-}
 
-trait LowPriorityGCD {
-
-  implicit def bothOdd2[A <: BNat, B <: BNat, Res <: BNat, Out <: BNat]
-  (implicit gcd: Aux[One[A], One[B], Res], lt: Lt[B, A]): Aux[One[B], One[A], Res] = null
-
+  implicit def bothOddRightGreater[A <: BNat, B <: BNat, Res <: BNat, Out <: BNat]
+  (implicit gcd: Aux[One[B], One[A], Res], lt: Lt[A, B]): Aux[One[A], One[B], Res] = null
 }
