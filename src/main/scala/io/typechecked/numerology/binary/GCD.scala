@@ -24,12 +24,12 @@ object GCD {
   implicit def rightEven[A <: BNat, B <: BNat]
   (implicit ev: GCD[One[A], B]): Aux[One[A], Zero[B], ev.Out] = null
 
-  implicit def bothOddLeftGreater[A <: BNat, B <: BNat, Res <: BNat, Out <: BNat, MultOut <: BNat]
-  (implicit gcd: Aux[A, One[B], Res],
-   mult: Mult.Aux[A, b2, MultOut],
-   sum: Sum.Aux[MultOut, One[B], One[Out]],
-   gt: Gt[Out, B]
-  ): Aux[One[Out], One[B], Res] = null
+  implicit def bothOddLeftGreater[A <: BNat, B <: BNat, MinusOut <: BNat, HalveOut <: BNat, Res <: BNat]
+  (implicit gt: Gt[A, B],
+   minus: Minus.Aux[One[A], One[B], MinusOut],
+   halve: Halve.Aux[MinusOut, HalveOut],
+   gcd: Aux[HalveOut, One[B], Res]
+  ): Aux[One[A], One[B], Res] = null
 
   implicit def bothOddRightGreater[A <: BNat, B <: BNat, Res <: BNat, Out <: BNat]
   (implicit gcd: Aux[One[B], One[A], Res], lt: Lt[A, B]): Aux[One[A], One[B], Res] = null
