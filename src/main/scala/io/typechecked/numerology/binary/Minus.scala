@@ -12,8 +12,14 @@ object Minus {
   implicit def zeroCase[A <: BNat]: Aux[A, b0, A] = null
   implicit def equalsCase[A <: BOperation[_ <: BNat]]: Aux[A, A, b0] = null
 
-  implicit def minusZeroZero[A <: BNat, B <: BNat, C <: BNat](implicit neq: A =:!= B, ev: Aux[A, B, C]): Aux[Zero[A], Zero[B], Zero[C]] = null
-  implicit def minusOneOne[A <: BNat, B <: BNat, C <: BNat](implicit neq: A =:!= B, ev: Aux[A, B, C]): Aux[One[A], One[B], Zero[C]] = null
+  implicit def minusZeroZero[A <: BNat, B <: BNat, C <: BNat](
+    implicit neq: A =:!= B,
+    ev: Aux[A, B, C]
+  ): Aux[Zero[A], Zero[B], Zero[C]] = null
+
+  implicit def minusOneOne[A <: BNat, B <: BNat, C <: BNat](
+    implicit neq: A =:!= B, ev: Aux[A, B, C]
+  ): Aux[One[A], One[B], Zero[C]] = null
 
   implicit def minusZeroOne[A <: BNat, B <: BNat, C <: BNat, D <: BNat](
     implicit s: Minus.Aux[A, B, C],
