@@ -1,4 +1,6 @@
-package io.typechecked.numerology.binary
+package io.typechecked
+package numerology
+package binary
 
 import io.typechecked.numerology.binary.BNat.{b0, b1, b2, b3}
 import org.scalatest.{FlatSpec, Matchers}

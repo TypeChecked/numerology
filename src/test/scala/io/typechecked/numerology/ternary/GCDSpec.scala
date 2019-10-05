@@ -1,4 +1,6 @@
-package io.typechecked.numerology.ternary
+package io.typechecked
+package numerology
+package ternary
 
 import org.scalatest.{FlatSpec, Matchers}
 

@@ -1,4 +1,6 @@
-package io.typechecked.numerology.binary
+package io.typechecked
+package numerology
+package binary
 
 import io.typechecked.numerology.binary.BNat.{b0, b2}
 import shapeless.=:!=
@@ -12,8 +14,8 @@ object GCD {
   type Aux[A <: BNat, B <: BNat, Out0 <: BNat] = GCD[A, B] { type Out = Out0 }
 
   implicit def equal[A <: BNat]: Aux[A, A, A] = null
-  implicit def zeroLeft[B <: BNat](implicit ev: B =:!= b0): Aux[b0, B, b0] = null
-  implicit def zeroRight[A <: BNat](implicit ev: A =:!= b0): Aux[A, b0, b0] = null
+  implicit def zeroLeft[B <: BNonZero]: Aux[b0, B, b0] = null
+  implicit def zeroRight[A <: BNonZero]: Aux[A, b0, b0] = null
 
   implicit def bothEven[A <: BNat, B <: BNat, Res <: BNat](
     implicit neq: A =:!= B,
